@@ -1,48 +1,105 @@
+site_url: https://briandanky.github.io/mkdocs-docs_Gss/
 site_name: My Docs
-site_description: 一個使用 Material for MkDocs 的文件網站
+site_description: 一個使用 Material for MkDocs 的顧問／客戶文件網站
 site_author: bass_chen
+
+repo_name: briandanky/mkdocs-docs_Gss
+repo_url: https://github.com/briandanky/mkdocs-docs_Gss
+edit_uri: edit/main/docs/
 
 theme:
   name: material
-  language: zh-TW          
+  language: zh-TW
+
+  logo: assets/images/logo.png       # 可先不放，之後補
+  favicon: assets/images/favicon.ico # 可先不放
+
   palette:
     - scheme: default
-      primary: indigo      # 主色（可改 blue / pink / teal 等）
+      primary: indigo
       accent: indigo
+
   features:
+    # 導覽體驗
     - navigation.instant
+    - navigation.instant.progress
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.tracking
+
+    # 搜尋體驗
     - search.highlight
     - search.share
+    - search.suggest
+
+    # Header / UX
     - header.autohide
-    - content.code.copy     # 右上角複製程式碼按鈕
-    - content.action.edit   # 顯示編輯按鈕（需 GitHub repo 才會生效）
+    - toc.follow
+
+    # 內容輔助
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
 
 markdown_extensions:
-  - admonition               # 提示框 Note/Warning/Tip
-  - codehilite               # 程式碼上色
-  - toc:
-      permalink: true
+  - admonition
   - footnotes
   - meta
-  # - deflist
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # pymdownx 系列（Material 核心戰力）
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.emoji:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.superfences     # 支援程式碼區塊
 
 plugins:
   - search:
-      lang: 
+      lang:
+        - zh
         - ja
         - en
-        - zh
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/briandanky
+
+  generator: false  # footer 不顯示 Made with MkDocs
 
 nav:
   - 首頁: index.md
-  - 關於本站: about.md
-  - 功能示範: features.md
+
+  - 關於本站:
+      - 系統介紹: about.md
+      - 使用對象與定位: about/target.md
+
+  - 功能與操作:
+      - 功能總覽: features.md
+      - 快速開始: guide/quick-start.md
+      - 操作說明:
+          - 基本操作: guide/basic.md
+          - 進階設定: guide/advanced.md
+
+  - 問題排除（FAQ）:
+      - 常見問題: faq/index.md
+      - 錯誤排查: faq/troubleshooting.md
+
+  - 版本更新:
+      - 版本總覽: release/index.md
+      - v1.x: release/v1.md
+      - v2.x: release/v2.md
+
+  - 聯絡與支援: contact.md
