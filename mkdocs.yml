@@ -1,0 +1,48 @@
+site_name: My Docs
+site_description: 一個使用 Material for MkDocs 的文件網站
+site_author: bass_chen
+
+theme:
+  name: material
+  language: zh-TW          
+  palette:
+    - scheme: default
+      primary: indigo      # 主色（可改 blue / pink / teal 等）
+      accent: indigo
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - header.autohide
+    - content.code.copy     # 右上角複製程式碼按鈕
+    - content.action.edit   # 顯示編輯按鈕（需 GitHub repo 才會生效）
+
+markdown_extensions:
+  - admonition               # 提示框 Note/Warning/Tip
+  - codehilite               # 程式碼上色
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  # - deflist
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.superfences     # 支援程式碼區塊
+
+plugins:
+  - search:
+      lang: 
+        - ja
+        - en
+        - zh
+
+nav:
+  - 首頁: index.md
+  - 關於本站: about.md
+  - 功能示範: features.md
