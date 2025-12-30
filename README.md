@@ -10,3 +10,6 @@ git pull --rebase
 3. git commit -m "msg"
 4. git push
 5. mkdocs gh-deploy
+
+
+https://briandanky.github.io/mkdocs-docs_Gss/
