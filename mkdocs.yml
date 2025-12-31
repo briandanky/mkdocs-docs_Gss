@@ -96,6 +96,7 @@ nav:
   - 問題排除（FAQ）:
       - 常見問題: faq/index.md
       - 錯誤排查: faq/troubleshooting.md
+      - ISSUE-18653: faq/ISSUE-18653.md
 
   - 版本更新:
       - 版本總覽: release/index.md
