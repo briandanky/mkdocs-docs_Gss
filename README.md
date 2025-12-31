@@ -4,7 +4,6 @@ GSS 使用手冊
 地端更新先拉檔案
 git pull --rebase
 
-發佈手順
 寫文件（.md）
 1.git status(看狀態)
 2.git add(選要存的檔案)
