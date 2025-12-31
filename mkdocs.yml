@@ -96,7 +96,7 @@ nav:
   - 問題排除（FAQ）:
       - 常見問題: faq/index.md
       - 錯誤排查: faq/troubleshooting.md
-      - ISSUE-18653: faq/ISSUE-18653.md
+      - ISSUE-18653 使用處理文件回傳圖片 API 時，傳入文字 PDF，回傳的圖片文字消失了: faq/ISSUE-18653.md
 
   - 版本更新:
       - 版本總覽: release/index.md
