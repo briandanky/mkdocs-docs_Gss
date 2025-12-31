@@ -5,11 +5,16 @@ GSS 使用手冊
 git pull --rebase
 
 發佈手順
-1. git status
-2. git add .
-3. git commit -m "msg"
-4. git push
-5. mkdocs gh-deploy
-
+寫文件（.md）
+   ↓
+git status   ← 看狀態
+   ↓
+git add      ← 選要存的檔案
+   ↓
+git commit   ← 建立版本節點
+   ↓
+git push     ← 同步到遠端
+   ↓
+mkdocs gh-deploy ← 部署成網站
 
 https://briandanky.github.io/mkdocs-docs_Gss/
